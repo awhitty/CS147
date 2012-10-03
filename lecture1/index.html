@@ -6,8 +6,9 @@
 	
 	<style type="text/css">
 		body {
-			background: #eee;
+			background: #198AE6;
 			font-family: Helvetica;
+			color: #555;
 		}
 
 		.wrapper {
@@ -15,17 +16,26 @@
 			margin: 0 auto;
 			background: #fff;
 			padding: 1px 20px 20px 20px;
-			border-radius: 10px;
 		}
 		h2 {
 			font-size: 50px;
-			color: #aaa;
+			color: #000;
 			font-weight: 300;
 		}
 
 		h3 {
 			font-size: 22px;
 			font-weight: 100;
+			color: #222;
+		}
+
+		.opacity {
+			opacity: .2;
+			-webkit-transition: opacity 1s;
+		}
+
+		.opacity:hover {
+			opacity: 1;
 		}
 	</style>
 	
@@ -33,6 +43,12 @@
 	 	<div class="wrapper">
 	 		<h2>Rio Akasaka</h2>
 	 				<div id='bio'>Crime-solver. Noir detective extraordinaire.</div>
+
+	 		<video><source src="gizmo.mp4" type="video/mp4" /></video>
+
+	 		<p><img src="seal.png" class="opacity" alt=""></p>
+
+	 		<button>Hello</button>
 	 			 
 	 		<h3>Assignments</h3>
 	 				<ul id='assignments'>
@@ -40,7 +56,7 @@
 	 					<li>Learn HTML</li>
 	 				</ul>
 	 			
-	 				<h3>A nice button here.</h3>
+	 				<h3>A nice button</h3>
 	 		
 	 				<h3>An invisible seal</h3>
 	 		

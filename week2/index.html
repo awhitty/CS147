@@ -9,33 +9,62 @@
 		<meta name="viewport" content="width=device-width, user-scalable=no">
 		
 		<link href="style.css" rel="stylesheet" type="text/css">
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.8.2.js"></script>
 	</head>
 
 	<body>
-			<!-- This is the top bit with the image. 
+		<!-- This is the top bit with the image. 
 		I wonder why there's no image tag here? -->
 		<div class="whitebit"></div>
 
+
 		<!-- This is, well, the bottom bit -->
 		<div class="bottombit">
-			<p class="explanation">Intrepid spy, your next dead drop location is 37.4258709,-122.1712977.</p>
-			<div id="button">Refresh GPS: <div id="timer"></div></div>
+			<div id="alerts">
+				<p class="alert explanation">
+					Clicked
+				</p>
+			</div>
+			<p class="explanation">
+				<strong>Next drop location:</strong> <br />
+				<small>37.4258709, -122.1712977</small>
+			</p>
+			<div id="button"><span class="muted">Refresh GPS:</span> <div id="timer"></div></div>
 
 			<div class="area">
-				<div class="box box1"><div class="latitude"></div></div>
-				<div class="box box2"><div class="longitude"></div></div>
+				<div class="box box1"><div class="latitude">
+					<h3 class="muted">Hello</h3>
+				</div></div>
+				<div class="box box2"><div class="longitude">
+					<h3 class="muted">Goodbye</h3>
+				</div></div>
 			</div>
 
 		</div>
 
 		<!-- Let's put in a timer here -->
 		<script type="text/javascript">
-
+			// var count = 30;
+			// var counter = setInterval(timer, 1000); 
+			
+			// function timer() {
+			//     count = count - 1;
+			//     if (count <= 0) {
+			//         clearInterval(counter);
+			//         alert("Boom!");
+			//         document.getElementById('button').style.visibility = 'hidden';
+			//         return;
+			//     }
+			
+			//     document.getElementById("timer").innerHTML = count + " secs";
+			// }
 		</script>
 		
 		<!-- Let's put in the geolocation stuff here -->
 		<script type="text/javascript">
-		
+			$('.box1').click(function() {
+				$('#alerts').fadeIn('<p class="explanation alert">Hi</p>')
+			})
 		</script>
 	</body>
 </html>

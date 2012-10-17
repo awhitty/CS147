@@ -12,13 +12,28 @@
 	</head>
 
 	<body>
-	
 		<div class="banner"></div>
-		
-		<table>
-		<!-- This is where we'll put all our content -->
-		
-		</table>
+		<?php
+			include("menu.php");
+		?>
+		<ul id="books">
+		<?php
+			include("config.php");
+			$query = "SELECT * FROM  `books` LIMIT 0 , 30";
+			
+			// Don’t be intimidated by the following lines. You can pretty much
+			// always copy and paste these because they’re sort of like
+			// functional bits that never change.
+			$result = mysql_query($query);
+			while ($row = mysql_fetch_assoc($result)) {
+				echo "<li>";
+				echo "<img src=\"".$row['image']."\">";
+				echo "<h3>".$row['title']."</h3>";
+				echo "<h4>".$row['author']."</h4>";
+				echo "</li>";
+			}
+		?>
+		</ul>
 		
 		<script type="text/javascript">
 		$("a").click(function (event) {
